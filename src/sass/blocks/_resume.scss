@@ -4,10 +4,9 @@
         text-align: center;
         &_circle {
             position: relative;
-            @include before-circle(7px, 0);
+            @include before-circle(-6px, 50%);
             &::before {
-                top: -6px;
-                left: 552px;
+                transform: translateX(-50%);
             }
         }
     }

@@ -65,3 +65,12 @@ elem2.addEventListener('mouseout', () => {
     elem2.classList.remove('button');
     elem1.classList.add('button');
 }); */
+
+/* ----------------------------------- Progress ----------------------------------- */
+
+const   progress = document.querySelectorAll('.progress__percent'),
+        progressFull = document.querySelectorAll('.progress__scale-full');
+
+        progress.forEach((item, i) => {
+            progressFull[i].style.width = item.innerHTML;
+        });

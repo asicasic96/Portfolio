@@ -1,0 +1,111 @@
+.skills {
+    padding-top: 120px;
+    &__title {
+        position: relative;
+        text-align: center;
+        @include before-circle(-6px, 50%);
+            &::before {
+                transform: translateX(-50%);
+            }
+    }
+    &__subtitle {
+        text-align: center;
+        padding-bottom: 25px;
+    }
+    &__wrapper {
+        padding-top: 60px;
+        display: grid;
+        grid-template: repeat(2, minmax(270px, auto)) / repeat(4, 270px);
+        grid-auto-rows: minmax(270px, auto);
+        gap: 13px;
+    }
+    &__item {
+        padding: 30px 30px 25px 30px;
+        border: 1px solid #000;
+        &-img {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 65px;
+            img {
+                max-width: 100%;
+            }
+        }
+        &_title {
+            font-weight: 700;
+            margin-top: 20px;
+        }
+        &_subtitle {
+            margin-top: 15px;
+        }
+    }
+}
+/* -------------------- Прогресс FlexBox -------------------- */
+/* .progress {
+    padding-top: 120px;
+    display: grid;
+    grid-template: repeat(2, minmax(70px, auto)) / repeat(3, 350px);
+    grid-auto-rows: minmax(70px, auto);
+    gap: 30px 45px;
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__head {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__title {
+        font-weight: 700;
+        position: relative;
+        padding-left: 13px;
+        @include before-circle(-7px, 0)
+    }
+    &__scale {
+        width: 350px;
+        height: 14px;
+        background: #E8E4DE;
+        border-radius: 4px;
+        &_full {
+            height: 14px;
+            background: $main_color;
+            border-radius: 4px;
+        }
+    }
+} */
+
+/* -------------------- Прогресс GRID + JS -------------------- */
+
+.progress {
+    padding-top: 120px;
+    display: grid;
+    grid-template: repeat(2, minmax(70px, auto)) / repeat(3, 350px);
+    grid-auto-rows: minmax(70px, auto);
+    gap: 30px 45px;
+    &__wrapper {
+        display: grid;
+        grid-template: 21px 14px / minmax(170px, auto) minmax(34px, auto);
+        justify-content: space-between;
+        align-content: space-between;
+    }
+    &__title {
+        font-weight: 700;
+    }
+    &__scale {
+        width: 350px;
+        height: 14px;
+        background: #E8E4DE;
+        border-radius: 4px;
+        &-full {
+            height: 14px;
+            background: $main_color;
+            border-radius: 4px;
+        }
+    }
+}
