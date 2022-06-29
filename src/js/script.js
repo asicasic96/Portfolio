@@ -18,8 +18,10 @@ closeOverlay.addEventListener('click', () => {
 });
 /* --------------------------------------------------------------- */
 
+
 /* --------------------------Кнопки Promo------------------------- */
-const   cubeActive = document.querySelector('.promo__cube_active'),
+/* С помощью движения обьекта */
+/* const   cubeActive = document.querySelector('.promo__cube_active'),
         cube = document.querySelector('.promo__cube'),
         elemCube = document.getElementById('elemCube');
 
@@ -29,6 +31,37 @@ elemCube.addEventListener('mouseover', () => {
 
 elemCube.addEventListener('mouseout', () => {
     cube.classList.remove('promo__cube_active');
+}); */
+
+/* С помощью переключения */
+const   /* cubeActive = document.querySelector('.promo__button-active'), */
+        button = document.querySelector('.promo__button'),
+        elemCube1 = document.getElementById('elemCube1'),
+        elemCube2 = document.getElementById('elemCube2');
+
+elemCube2.addEventListener('mouseover', () => {
+    elemCube1.classList.remove('promo__button-active');
+    elemCube2.classList.add('promo__button-active');
 });
 
+elemCube2.addEventListener('mouseout', () => {
+    elemCube2.classList.remove('promo__button-active');
+    elemCube1.classList.add('promo__button-active');
+});
 /* --------------------------------------------------------------- */
+
+
+
+/* const   button = document.querySelector('.button'),
+        elem1 = document.getElementById('my1'),
+        elem2 = document.getElementById('my2');
+
+elem2.addEventListener('mouseover', () => {
+    elem1.classList.remove('button');
+    elem2.classList.add('button');
+});
+
+elem2.addEventListener('mouseout', () => {
+    elem2.classList.remove('button');
+    elem1.classList.add('button');
+}); */
