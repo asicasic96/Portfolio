@@ -67,10 +67,10 @@ elem2.addEventListener('mouseout', () => {
 }); */
 
 /* ----------------------------------- Progress ----------------------------------- */
-
 const   progress = document.querySelectorAll('.progress__percent'),
         progressFull = document.querySelectorAll('.progress__scale-full');
 
         progress.forEach((item, i) => {
             progressFull[i].style.width = item.innerHTML;
         });
+/* ----------------------------------- Progress ----------------------------------- */
