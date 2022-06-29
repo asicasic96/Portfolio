@@ -1,0 +1,89 @@
+.resume {
+    padding-top: 120px;
+    &__title {
+        text-align: center;
+        &_circle {
+            position: relative;
+            @include before-circle(7px, 0);
+            &::before {
+                top: -6px;
+                left: 552px;
+            }
+        }
+    }
+    &__subtitle {
+        text-align: center;
+        padding-bottom: 25px;
+    }
+    &__wrapper {
+        display: grid;
+        grid-template: 1fr / repeat(2, minmax(130px, auto));
+        grid-auto-rows: 1fr;
+        gap: 135px;
+    }
+    &__column {
+        padding: 60px 0 0 65px;
+        &_title {
+            position: relative;
+            &::before {
+                position: absolute;
+                content: '';
+                width: 15px;
+                height: 15px;
+                border-radius: 100%;
+                background: $main_color;
+                left: -50px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+        ul {
+            list-style-type: none;
+            li {
+                position: relative;
+                ::after {
+                    position: absolute;
+                    content: '';
+                    height: calc(100% + 50px);
+                    width: 1px;
+                    background-color: #000;
+                    left: -43px;
+                    top: -53px;
+                }
+            }
+        }
+    }
+    &__item {
+        margin-top: 45px;
+        position: relative;
+        &::after {
+            position: absolute;
+            content: '';
+            width: 42px;
+            height: 1px;
+            background-color: #000;
+            left: -42px;
+            top: 18px;
+        }
+    }
+    &__head {
+        display: grid;
+        grid-template: minmax(45px, auto) / 55px 100%;     // СТРОКА / КОЛОННА
+        column-gap: 20px;
+        &_circle {
+            position: relative;
+            @include before-circle(0, 0);
+            padding-top: 14px;
+            padding-left: 18px;
+            img {
+                max-width: 100%;
+            }
+        }
+        &_title {
+            font-weight: 700;
+        }
+    }
+    &__footer {
+        margin-top: 12px;
+    }
+}

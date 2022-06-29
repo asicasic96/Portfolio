@@ -19,13 +19,8 @@
         padding-left: 10px;
         @include before-circle(-7px, 0px);
     }
-    &__band {
-        width: 60px;
-        height: 3px;
-        background-color: $main_color;
-        margin-bottom: 20px;
-    }
     &__dev {
+        margin-top: 40px;
         display: grid;
         grid-template-columns: repeat(2, 260px);
         grid-template-rows: repeat(2, minmax(116px, auto));
@@ -46,6 +41,9 @@
         @include before-circle(-15px, -4px);
         margin-top: 10px;
         margin-right: 20px;
+    }
+    &__descr {
+        margin-top: 20px;
     }
     &__text {
         .title_fz12 {
