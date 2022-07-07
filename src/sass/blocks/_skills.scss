@@ -107,6 +107,9 @@
             background: $main_color;
             border-radius: 4px;
         }
+        :nth-child(3) {
+            grid-column: 1 / 3;
+        }
     }
 }
 /* -------------------- ----------------- -------------------- */
