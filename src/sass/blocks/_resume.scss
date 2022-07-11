@@ -67,7 +67,7 @@
     }
     &__head {
         display: grid;
-        grid-template: minmax(45px, auto) / 55px 100%;     // СТРОКА / КОЛОННА
+        grid-template: minmax(45px, auto) / 55px auto;     // СТРОКА / КОЛОННА
         column-gap: 20px;
         &_circle {
             position: relative;
@@ -84,5 +84,6 @@
     }
     &__footer {
         margin-top: 12px;
+        width: 375px;
     }
 }

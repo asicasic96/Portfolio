@@ -108,13 +108,13 @@
                 </svg>
             </div>
 
-            <ul class="menu__wrapper">
-                <li class="menu__item"><a href="#">ПРО МЕНЯ</a></li>
-                <li class="menu__item"><a href="#">МОЙ ОПЫТ</a></li>
-                <li class="menu__item"><a href="#">МОИ НАВЫКИ</a></li>
-                <li class="menu__item"><a href="#">МОИ РАБОТЫ</a></li>
-                <li class="menu__item"><a href="#">ПРАЙС-ЛИСТ</a></li>
-                <li class="menu__item"><a href="#">КОНТАКТЫ</a></li>
+            <ul id="userlist" class="menu__wrapper">
+                <li class="menu__item"><a id="userlist1" href="#about">ПРО МЕНЯ</a></li>
+                <li class="menu__item"><a id="userlist2" href="#resume"><span>МОЙ ОПЫТ</span></a></li>
+                <li class="menu__item"><a id="userlist3" href="#skills">МОИ НАВЫКИ</a></li>
+                <li class="menu__item"><a id="userlist4" href="#work">МОИ РАБОТЫ</a></li>
+                <li class="menu__item"><a id="userlist5" href="#price">ПРАЙС-ЛИСТ</a></li>
+                <li class="menu__item"><a id="userlist6" href="#contacts">КОНТАКТЫ</a></li>
             </ul>
 
             <div class="menu__social">
@@ -142,32 +142,32 @@
     </nav>
 
     <!-- Верхняя часть -->
-    <section class="promo">
+    <section id="promo" class="promo">
         <div class="hamburger">
             <div class="hamburger__band"></div>
             <div class="hamburger__band hamburger__band-longer"></div>
             <div class="hamburger__band"></div>
         </div>
         <div class="container">
-                <div class="title title_fz16 promo__circle">Меня зовут Александра Смит</div>
-                <h1 class="title title_fz48">Я web-разработчик из города Москва</h1>
+                <div class="title title_fz16 promo__title promo__circle">Меня зовут Александра Смит</div>
+                <h1 class="title title_fz48 promo__subtitle">Я web-разработчик из города Москва</h1>
                 <div class="promo__btns">
-                    <a href="#" id="elemCube1" class="promo__link promo__button promo__button-active">Портфолио</a>
-                    <a href="#" id="elemCube2" class="promo__link promo__button">Про меня</a>
+                    <a href="#work" id="elemCube1" class="promo__link promo__button promo__button-active">Портфолио</a>
+                    <a href="#about" id="elemCube2" class="promo__link promo__button">Про меня</a>
                     <!-- <div class="promo__cube"></div> --> <!-- Передвижной обьект -->
                 </div>
         </div>
     </section>
 
     <!-- Обо мне GRID -->
-    <section class="about">
+    <section id="about" class="about">
         <div class="container">
             <div class="about__grid-container">
                 <div id="about-photo" class="about__photo"><img src="img/Photo.jpg" alt="Photo"></div>
 
                 <div id="about-my" class="about__my">
-                    <h1 class="title title_fz16 about__circle-title">Про меня</h1>
-                    <div class="title title_fz36">Меня зовут Александра</div>
+                    <h1 class="title title_fz16 about__title about__circle-title">Про меня</h1>
+                    <div class="title title_fz36 about__subtitle">Меня зовут Александра</div>
                     <div class="devider devider-left"></div>
                     <div class="title title_fz14 about__descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</div>
                 </div>
@@ -239,7 +239,7 @@
 
 
     <!-- Резюме -->
-    <section class="resume">
+    <section id="resume" class="resume">
         <div class="container">
             <h1 class="title title_fz16 resume__title resume__title_circle">Опыт</h1>
             <h2 class="title title_fz36 resume__subtitle">Чем я буду полезна</h2>
@@ -300,7 +300,7 @@
     </section>
 
     <!-- Навыки и прогресс -->
-    <section class="skills">
+    <section id="skills" class="skills">
         <div class="container">
             <h1 class="title title_fz16 skills__title">Навыки</h1>
             <h2 class="title title_fz36 skills__subtitle">Что я использую в работе</h2>
@@ -342,6 +342,7 @@
                     <div class="title title_fz12 skills__item_subtitle">Это нереляционная база данных, которая будет хранить данные вашего сайта или приложения</div>
                 </div>
             </div>
+
             <!-- Прогресс FlexBox -->
             <!-- <div class="progress">
                 <div class="progress__wrapper">
@@ -413,7 +414,7 @@
             </div> -->
 
             <!-- Прогресс GRID + JS -->
-            <div class="progress">
+            <div id="progress" class="progress">
                 <div class="progress__wrapper">
                     <div class="title title_fz14 progress__title">Создание сайтов</div>
                     <div class="title title_fz14 progress__percent">60%</div>
@@ -460,7 +461,7 @@
         </div>
     </section>
 
-    <section class="work">
+    <section id="work" class="work">
         <div class="container">
             <h1 class="title title_fz16 work__title">Портфолио</h1>
             <h2 class="title title_fz36 work__subtitle">Мои работы</h2>
@@ -476,7 +477,7 @@
         </div>
     </section>
 
-    <section class="price">
+    <section id="price" class="price">
         <div class="container">
             <h1 class="title title_fz16 price__title">Прайс-лист</h1>
             <div class="devider"></div>
@@ -519,7 +520,7 @@
         </div>
     </section>
 
-    <section class="contacts">
+    <section id="contacts" class="contacts">
         <div class="container">
             <div class="contacts__column">
                 <div class="contacts__photo"><img src="img/Photo.jpg" alt="Photo"></div>
@@ -542,7 +543,7 @@
                             <label for="name">Ваше имя</label>
                         </div>
                         <div class="contacts__input">
-                            <input required name="email" id="email" type="email">
+                            <input required name="email" id="email" placeholder="ivan@***.com" type="email">
                             <label for="email">Ваша почта</label>
                         </div>
                         <div class="contacts__textarea">
@@ -556,7 +557,10 @@
         </div>
     </section>
 
-    <!-- <script src="js/jquery-3.6.0.min.js"></script> -->
+    <div class="pageup"><a href="#promo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256c141.4 0 256-114.6 256-256S397.4 0 256 0zM382.8 246.1C380.3 252.1 374.5 256 368 256h-64v96c0 17.67-14.33 32-32 32h-32c-17.67 0-32-14.33-32-32V256h-64C137.5 256 131.7 252.1 129.2 246.1C126.7 240.1 128.1 233.3 132.7 228.7l112-112c6.248-6.248 16.38-6.248 22.62 0l112 112C383.9 233.3 385.3 240.1 382.8 246.1z"/></svg></a></div>
+
+    <!-- <script  src="https://code.jquery.com/jquery-migrate-3.4.0.js "></script> -->
+    <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

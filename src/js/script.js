@@ -2,7 +2,13 @@
 const   hamburger = document.querySelector('.hamburger'),
         menu      = document.querySelector('.menu'),
         closeElem = document.querySelector('.menu__close'),
-        closeOverlay = document.querySelector('.menu__overlay');
+        closeOverlay = document.querySelector('.menu__overlay'),
+        closeA1 = document.querySelector('#userlist1'),
+        closeA2 = document.querySelector('#userlist2'),
+        closeA3 = document.querySelector('#userlist3'),
+        closeA4 = document.querySelector('#userlist4'),
+        closeA5 = document.querySelector('#userlist5'),
+        closeA6 = document.querySelector('#userlist6');
 
 /* Открывает */
 hamburger.addEventListener('click', () => {
@@ -14,6 +20,26 @@ closeElem.addEventListener('click', () => {
 });
 /* Закрывает при клике на пустое белое пространство */
 closeOverlay.addEventListener('click', () => {
+    menu.classList.remove('active');
+});
+
+/* Закрывает при клике на ссылку */
+closeA1.addEventListener('click', () => {
+    menu.classList.remove('active');
+});
+closeA2.addEventListener('click', () => {
+    menu.classList.remove('active');
+});
+closeA3.addEventListener('click', () => {
+    menu.classList.remove('active');
+});
+closeA4.addEventListener('click', () => {
+    menu.classList.remove('active');
+});
+closeA5.addEventListener('click', () => {
+    menu.classList.remove('active');
+});
+closeA6.addEventListener('click', () => {
     menu.classList.remove('active');
 });
 /* --------------------------------------------------------------- */
@@ -74,3 +100,41 @@ const   progress = document.querySelectorAll('.progress__percent'),
             progressFull[i].style.width = item.innerHTML;
         });
 /* ----------------------------------- Progress ----------------------------------- */
+
+/* Плавный skroll */
+const smoothLinks = document.querySelectorAll('a[href^="#"]');
+for (let smoothLink of smoothLinks) {
+    smoothLink.addEventListener('click', function (e) {
+        e.preventDefault();
+        const id = smoothLink.getAttribute('href');
+
+        document.querySelector(id).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    });
+}
+
+/* Появление pageup jquery */
+$(window).scroll(function() {
+    if($(this).scrollTop() > 1600) {
+        $('.pageup').fadeIn();
+    } else {
+        $('.pageup').fadeOut();
+    }
+});
+
+
+/* Форма отправки */
+/* $('form').submit(function(e) {
+    e.preventDefault();
+    $.ajax({
+        type: "POST",
+        url: "mailer/smart.php",
+        data: $(this).serialize()
+    }).done(function() {
+        $(this).find("input").val("");
+        $('form').trigger('reset');
+    });
+    return false;
+}); */
