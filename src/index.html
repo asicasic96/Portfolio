@@ -163,7 +163,18 @@
     <section id="about" class="about">
         <div class="container">
             <div class="about__grid-container">
-                <div id="about-photo" class="about__photo"><img src="img/Photo.jpg" alt="Photo"></div>
+                <div id="about-photo" class="about__photo">
+                    <!-- <img src="img/Photo.jpg" alt="Photo"> -->
+                    <picture>
+                        <source srcset="img/Photo-min1x.webp 1x, img/Photo-min2x.webp 2x" media="(max-width: 576px)" type="image/webp">
+                        <source srcset="img/Photo.webp 1x, img/Photo2x.webp 2x" media="(min-width: 577px)" type="image/webp">
+
+                        <source media="(max-width: 576px)" srcset="img/Photo-min1x.jpg 1x, img/Photo-min2x.jpg 2x" type="image/jpg">
+                        <source media="(min-width: 577px)" secset="img/Photo.jpg 1x, img/Photo2x.jpg 2x" type="image/jpg">
+
+                        <img src="img/Photo.jpg" alt="Photo">
+                    </picture>
+                </div>
 
                 <div id="about-my" class="about__my">
                     <h1 class="title title_fz16 about__title about__circle-title">Про меня</h1>
@@ -549,6 +560,13 @@
                         <div class="contacts__textarea">
                             <textarea name="text" id="text"></textarea>
                             <label for="text">Ваше сообщение</label>
+                        </div>
+                        <div class="contacts__polit">
+                            <input required type="checkbox">
+                            <div class="contacts__polit-descr">Я согласен(а) с <span><a href="polit.html" target="_blank">политикой конфиденциальности</a></span></div>
+                            
+
+                             
                         </div>
                         <button class="btn">Отправить сообщение</button>
                     </form>

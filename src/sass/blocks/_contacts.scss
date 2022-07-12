@@ -85,4 +85,17 @@
         font-size: 14px;
         line-height: 21px;
     }
+    &__polit {
+        margin: 0 auto;
+        width: 270px;
+        display: flex;
+        justify-content: space-around;
+        align-items:center;
+        input {
+            margin-top: 5px;
+        }
+        &-descr {
+            width: 225px;
+        }
+    }
 }
