@@ -349,6 +349,22 @@
         &__textarea {
             grid-column: auto;
         }
-        
+    }
+
+    .modal-thanks {
+        &__wrapper {
+            width: 310px;
+        }
+        &__header {
+            font-size: 20px;
+        }
+        &__footer {
+            margin-top: 3px;
+            font-size: 22px;
+        }
+        &__close {
+            font-size: 23px;
+            top: 0;
+        }
     }
 }

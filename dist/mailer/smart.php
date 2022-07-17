@@ -11,15 +11,15 @@ $mail->CharSet = 'utf-8';
 // $mail->SMTPDebug = 3;                               // Enable verbose debug output
 
 $mail->isSMTP();                                      // Set mailer to use SMTP
-$mail->Host = 'smtp.yandex.ru';  // Specify main and backup SMTP servers
+$mail->Host = 'smtp.mail.ru';  // Specify main asnd backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'asic1234@yandex.ru';                 // Наш логин
-$mail->Password = 'samprpsamprp123';                           // Наш пароль от ящика
+$mail->Username = 'nemag33@mail.ru';                 // Наш логин
+$mail->Password = 'ho3LuWiEm7mOcYja7mGj';                           // Наш пароль от ящика
 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465;                                    // TCP port to connect to
  
-$mail->setFrom('asic1234@yandex.ru', 'Portfolio');   // От кого письмо 
-$mail->addAddress('fowibam433@shbiso.com');     // Add a recipient
+$mail->setFrom('nemag33@mail.ru', 'Portfolio');   // От кого письмо 
+$mail->addAddress('asic1234@yandex.ru');     // Add a recipient
 //$mail->addAddress('ellen@example.com');               // Name is optional
 //$mail->addReplyTo('info@example.com', 'Information');
 //$mail->addCC('cc@example.com');
@@ -32,8 +32,8 @@ $mail->Subject = 'Данные';
 $mail->Body    = '
 		Пользователь оставил данные <br> 
 	Имя: ' . $name . ' <br>
-	Номер телефона: ' . $text . '<br>
-	E-mail: ' . $email . '';
+	E-mail: ' . $email . ' <br>
+	Сообщение: ' . $text . '<br>';
 
 if(!$mail->send()) {
     return false;

@@ -126,7 +126,7 @@ $(window).scroll(function() {
 
 
 /* Форма отправки */
-/* $('form').submit(function(e) {
+$('form').submit(function(e) {
     e.preventDefault();
     $.ajax({
         type: "POST",
@@ -134,7 +134,18 @@ $(window).scroll(function() {
         data: $(this).serialize()
     }).done(function() {
         $(this).find("input").val("");
+        $('#thanks').fadeIn('slow');
         $('form').trigger('reset');
     });
     return false;
-}); */
+});
+
+/* Закрытие модального окна Thanks */
+
+$('.modal-thanks__close').on('click', function() {
+    $('.modal-thanks').fadeOut('slow');
+});
+
+$('.modal-thanks__overlay').on('click', function() {
+    $('.modal-thanks').fadeOut('slow');
+});
